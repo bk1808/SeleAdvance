@@ -1,0 +1,16 @@
+Assignment:
+
+Test Case  - Create Organization inside vTiger application [Data driven testing with
+respect to property file]
+
+Step1: Login
+Step2: Navigate to organization module
+Step3: Click on create organization button
+Step4: Enter all the details and create new organization
+Step5: Verify organization name in the header of the message 
+Step6: Logout
+
+Note: 
+1. Common data should not be hardcoded
+2. test script should be able to run in different browser with minimal changes
+3. test script data can be hardcoded  
