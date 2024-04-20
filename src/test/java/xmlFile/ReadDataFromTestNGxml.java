@@ -54,7 +54,7 @@ public class ReadDataFromTestNGxml {
 		
 		Random r=new Random();
 		int randomNum = r.nextInt();
-
+//affed
 //		Read testScriptData from excel file
 		
 		FileInputStream fis=new FileInputStream("./data/testScriptData.xlsx");
