@@ -1,4 +1,4 @@
-package cmdLine;
+package ddt_cmdLine;
 
 import java.io.FileInputStream;
 import java.io.IOException;

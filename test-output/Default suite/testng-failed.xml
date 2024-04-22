@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="xmlFile.ReadDataFromTestNGxml">
+      <class name="cmdLine.SeleniumTestReadDataFromRunTime">
         <methods>
-          <include name="createOrgUsingXml" invocation-numbers="0"/>
+          <include name="createOrgTest"/>
         </methods>
-      </class> <!-- xmlFile.ReadDataFromTestNGxml -->
+      </class> <!-- cmdLine.SeleniumTestReadDataFromRunTime -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

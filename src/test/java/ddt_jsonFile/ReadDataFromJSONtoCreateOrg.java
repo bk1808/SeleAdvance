@@ -1,4 +1,4 @@
-package jsonFile;
+package ddt_jsonFile;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

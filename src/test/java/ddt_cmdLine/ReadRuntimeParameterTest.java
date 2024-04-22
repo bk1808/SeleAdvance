@@ -1,4 +1,4 @@
-package cmdLine;
+package ddt_cmdLine;
 
 import org.testng.annotations.Test;
 
@@ -16,6 +16,5 @@ public class ReadRuntimeParameterTest {
 		System.out.println("Env data==username==>"+un);
 		System.out.println("Env data==password==>"+pw);
 	}
-	
 	
 }

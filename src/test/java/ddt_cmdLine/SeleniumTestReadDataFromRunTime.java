@@ -1,11 +1,11 @@
-package xmlFile;
+package ddt_cmdLine;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 import java.util.Random;
 
-import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
@@ -16,17 +16,20 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
-import org.testng.xml.XmlTest;
 
-public class ReadDataFromTestNGxml {
-//NOTE: run this class using testNG.xml file run as testNG
+public class SeleniumTestReadDataFromRunTime {
+	
+	
 	@Test
-	public void createOrgUsingXml(XmlTest test) throws EncryptedDocumentException, IOException, InterruptedException {
-// reading the data from testNG.xml file which has <parameter> tag with name & value pair for data
-		String browser = test.getParameter("browser");
-		String url = test.getParameter("url");
-		String un = test.getParameter("username");
-		String pwd = test.getParameter("password");
+	public void createOrgTest() throws IOException, InterruptedException {
+//		Reading the data from Maven command line patameter during the run-time
+		
+		String url=System.getProperty("url");
+		String browser = System.getProperty("browser");
+		String un = System.getProperty("username");
+		String pw = System.getProperty("password");
+				
+//		To create random number dynamically for creating unique org account every time
 		
 		WebDriver driver=null;
 		
@@ -47,14 +50,14 @@ public class ReadDataFromTestNGxml {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get(url);
 		driver.findElement(By.name("user_name")).sendKeys(un);
-		driver.findElement(By.name("user_password")).sendKeys(pwd);
+		driver.findElement(By.name("user_password")).sendKeys(pw);
 		driver.findElement(By.id("submitButton")).submit();
 		driver.findElement(By.linkText("Organizations")).click();
 		driver.findElement(By.xpath("//img[@src='themes/softed/images/btnL3Add.gif']")).click();
 		
 		Random r=new Random();
 		int randomNum = r.nextInt();
-//affed
+
 //		Read testScriptData from excel file
 		
 		FileInputStream fis=new FileInputStream("./data/testScriptData.xlsx");

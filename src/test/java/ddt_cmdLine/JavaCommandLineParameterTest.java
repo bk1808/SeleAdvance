@@ -1,4 +1,4 @@
-package cmdLine;
+package ddt_cmdLine;
 
 public class JavaCommandLineParameterTest {
 
