@@ -19,7 +19,7 @@ public class ExecuteSelectQueryTest {
 //		step-5: close the connection
 		
 		Driver driverRef=new Driver();
-		
+		  
 		DriverManager.registerDriver(driverRef);
 		
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_projects", "root", "root");

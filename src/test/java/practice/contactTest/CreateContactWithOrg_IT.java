@@ -21,7 +21,7 @@ import org.openqa.selenium.interactions.Actions;
 public class CreateContactWithOrg_IT {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-//		NOTE: Pre-condition - at-least onr organization should be created
+//		NOTE: Pre-condition - at-least one organization should be created
 		
 		/* Converting manual test case into test script for regression testing to check whether the contact is created along with organization or not
 		Expted result: Contacts should be created along with organization and displayed in contact details page and verify the contact 
@@ -101,8 +101,8 @@ public class CreateContactWithOrg_IT {
 			driver.switchTo().window(child);
 			driver.findElement(By.id("search_txt")).sendKeys(orgName);
 			driver.findElement(By.name("search")).click();
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("//a[@href=\"javascript:window.close();\" and text()='"+orgName+"']")).click();//this xpath is created dynamically during run-time so we need to take the same reference to verify
+			Thread.sleep(4000);
+			driver.findElement(By.xpath("//a[text()='"+orgName+"']")).click();//this xpath is created dynamically during run-time so we need to take the same reference to verify
 			driver.switchTo().window(parent); 
 		}
 		
@@ -110,17 +110,18 @@ public class CreateContactWithOrg_IT {
 		
 //		verify the header message expected result 
 		String headerMessg=driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
-	
-		if(headerMessg.contains(orgName)) {
-			System.out.println(orgName+" is created===PASS");
+		
+		if(headerMessg.contains(contactLastName)) {
+			System.out.println(contactLastName+" is created===PASS");
 		}
 		else {
-			System.out.println(orgName+" is not created==FAIL");
+			System.out.println(contactLastName+" is not created==FAIL");
 		}
 
 //		verify the header orgName expected result 
 		String actualOrgNameinfo=driver.findElement(By.id("mouseArea_Organization Name")).getText();
-		if(actualOrgNameinfo.equals(orgName)) {
+		
+		if(actualOrgNameinfo.trim().equals(orgName)) {
 			System.out.println(orgName+" is created===PASS");
 		}else {
 			System.out.println(orgName+" is not created===FAIL");

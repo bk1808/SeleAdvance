@@ -18,7 +18,7 @@ public class ReadDataExpectedCondition {
 		String data2="";
 		String data3="";
 		boolean flag=false;
-		FileInputStream fis = new FileInputStream("C:\\Users\\Dell\\OneDrive\\Desktop\\testScriptData.xlsx");
+		FileInputStream fis = new FileInputStream("./data/testScriptData.xlsx");
 
 		Workbook wb = WorkbookFactory.create(fis);
 		org.apache.poi.ss.usermodel.Sheet sh = wb.getSheet("org");
