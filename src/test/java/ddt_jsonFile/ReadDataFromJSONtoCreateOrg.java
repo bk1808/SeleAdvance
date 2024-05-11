@@ -79,14 +79,13 @@ public class ReadDataFromJSONtoCreateOrg {
 	driver.findElement(By.name("accountname")).sendKeys(orgName);
 	driver.findElement(By.xpath("(//input[@title='Save [Alt+S]'])[1]")).click();
 	
-	Thread.sleep(1000);
+	Thread.sleep(3000);
 //	ste-6: click on logout, close workbook and close the browser	
 	Actions a=new Actions(driver);
 	WebElement ele = driver.findElement(By.xpath("//img[@src=\"themes/softed/images/user.PNG\"]"));
 	a.moveToElement(ele).perform();
-	Thread.sleep(500);
-	driver.findElement(By.linkText("Sign Out")).click();
 	
+	driver.findElement(By.linkText("Sign Out")).click();
 	driver.quit();
 	
 }
