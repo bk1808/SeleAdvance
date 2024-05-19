@@ -23,7 +23,7 @@ public class DemoDDT_Cross_Browser {
 	String un=p.getProperty("username");
 	String pw=p.getProperty("password");
 	
-	//Login to the application usind the values from property file
+	//Login to the application using the values from property file
 	
 	WebDriver driver=null;
 	

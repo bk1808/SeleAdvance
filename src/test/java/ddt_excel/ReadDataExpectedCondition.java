@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.sl.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
@@ -18,10 +18,10 @@ public class ReadDataExpectedCondition {
 		String data2="";
 		String data3="";
 		boolean flag=false;
-		FileInputStream fis = new FileInputStream("./data/testScriptData.xlsx");
+		FileInputStream fis = new FileInputStream("./testData/testScriptData.xlsx");
 
 		Workbook wb = WorkbookFactory.create(fis);
-		org.apache.poi.ss.usermodel.Sheet sh = wb.getSheet("org");
+		Sheet sh = wb.getSheet("org");
 		int rowcount = sh.getLastRowNum();
 		for(int i=0 ; i<=rowcount ; i++) {
 

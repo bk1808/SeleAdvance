@@ -1,24 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-20T15:19:10 IST" name="Suite" finished-at="2024-04-20T15:20:11 IST" duration-ms="61479">
+  <suite started-at="2024-05-18T10:27:13 IST" name="Default suite" finished-at="2024-05-18T10:27:13 IST" duration-ms="223">
     <groups>
     </groups>
-    <test started-at="2024-04-20T15:19:10 IST" name="Test" finished-at="2024-04-20T15:20:11 IST" duration-ms="61479">
-      <class name="xmlFile.ReadDataFromTestNGxml">
-        <test-method signature="createOrgUsingXml(org.testng.xml.XmlTest)[pri:0, instance:xmlFile.ReadDataFromTestNGxml@4550bb58]" started-at="2024-04-20T15:19:10 IST" name="createOrgUsingXml" finished-at="2024-04-20T15:20:11 IST" duration-ms="61302" status="PASS">
+    <test started-at="2024-05-18T10:27:13 IST" name="Default test" finished-at="2024-05-18T10:27:13 IST" duration-ms="223">
+      <class name="com.comcast.crm.contacttest.CreateContactTestUsingDataProvider">
+        <test-method signature="createContact(java.lang.String,java.lang.String)[pri:0, instance:com.comcast.crm.contacttest.CreateContactTestUsingDataProvider@145f66e3]" started-at="2024-05-18T10:27:13 IST" name="createContact" data-provider="getData" finished-at="2024-05-18T10:27:13 IST" duration-ms="24" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@68624b4a]]>
+                <![CDATA[Deepak]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[HR]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOrgUsingXml -->
-      </class> <!-- xmlFile.ReadDataFromTestNGxml -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- createContact -->
+        <test-method signature="createContact(java.lang.String,java.lang.String)[pri:0, instance:com.comcast.crm.contacttest.CreateContactTestUsingDataProvider@145f66e3]" started-at="2024-05-18T10:27:13 IST" name="createContact" data-provider="getData" finished-at="2024-05-18T10:27:13 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[HD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method signature="createContact(java.lang.String,java.lang.String)[pri:0, instance:com.comcast.crm.contacttest.CreateContactTestUsingDataProvider@145f66e3]" started-at="2024-05-18T10:27:13 IST" name="createContact" data-provider="getData" finished-at="2024-05-18T10:27:13 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Steve]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+      </class> <!-- com.comcast.crm.contacttest.CreateContactTestUsingDataProvider -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

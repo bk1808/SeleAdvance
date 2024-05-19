@@ -28,7 +28,7 @@ public class ReadDataFromTestNGxml {
 		String un = test.getParameter("username");
 		String pwd = test.getParameter("password");
 		
-		WebDriver driver=null;
+		WebDriver driver;
 		
 		if(browser.equals("chrome")) {
 			driver=new ChromeDriver();	

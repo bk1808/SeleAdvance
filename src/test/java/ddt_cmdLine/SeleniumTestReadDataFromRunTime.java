@@ -31,7 +31,7 @@ public class SeleniumTestReadDataFromRunTime {
 				
 //		To create random number dynamically for creating unique org account every time
 		
-		WebDriver driver=null;
+		WebDriver driver;
 		
 		if(browser.equals("chrome")) {
 			driver=new ChromeDriver();	

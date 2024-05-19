@@ -16,7 +16,7 @@ public class CloseConnectionIfSQLException {
  if there's any syntax error in writing the SQL query and the exceptions will 
  inturrupt the execution and the connection will never close which will cause
  the object creation each time the program is executed. This can lead to database 
- overload to avoid that we need to hadle the exception and close the connection
+ overload to avoid that we need to handle the exception and close the connection
  by using try-catch-finally blocks as shown below
 		 */
 		Connection conn=null;	
