@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ddt_jsonFile.ReadDataFromJSONtoCreateOrg">
+      <class name="ddt_database.UnitTestingToCheckExptectedDataInDB">
         <methods>
-          <include name="createOrgUsingJSON"/>
+          <include name="checkExpectedData"/>
         </methods>
-      </class> <!-- ddt_jsonFile.ReadDataFromJSONtoCreateOrg -->
+      </class> <!-- ddt_database.UnitTestingToCheckExptectedDataInDB -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
